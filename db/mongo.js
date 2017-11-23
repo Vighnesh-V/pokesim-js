@@ -1,4 +1,6 @@
 var mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/poke', function (err) {
 	if (err && err.message.includes('ECONNREFUSED')) {
 		console.log('Error connecting to mongodb database: %s.\nIs "mongod" running?', err.message);

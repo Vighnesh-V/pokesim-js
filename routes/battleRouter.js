@@ -4,12 +4,12 @@ var pDb = require('../db/player');
 var authOrCreate = require('../middlewares/auth');
 
 var renderNext = function (err, req, res, next) {
-	if (err) {
-		next (err);
-	} else {
-		res.render('battle');
-	}
-}
+	res.render('battle', {
+		user: req.query.key
+	});
+	console.log('Here with' + req.query.key);
+};
+
 
 router.get('/battle', authOrCreate, renderNext);
 
