@@ -1,0 +1,1652 @@
+{
+  "Absorb": {
+    "index": 71,
+    "name": "Absorb",
+    "pp": 40,
+    "pow": 20,
+    "acc": 100,
+    "type": "Grass",
+    "priority": 0,
+    "crit": 0
+  },
+  "Acid": {
+    "index": 51,
+    "name": "Acid",
+    "pp": 48,
+    "pow": 40,
+    "acc": 100,
+    "type": "Poison",
+    "priority": 0,
+    "crit": 0
+  },
+  "Acid Armor": {
+    "index": 151,
+    "name": "Acid Armor",
+    "pp": 32,
+    "pow": 0,
+    "acc": 0,
+    "type": "Poison",
+    "priority": 0,
+    "crit": 0
+  },
+  "Agility": {
+    "index": 97,
+    "name": "Agility",
+    "pp": 48,
+    "pow": 0,
+    "acc": 0,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Amnesia": {
+    "index": 133,
+    "name": "Amnesia",
+    "pp": 32,
+    "pow": 0,
+    "acc": 0,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Aurora Beam": {
+    "index": 62,
+    "name": "Aurora Beam",
+    "pp": 32,
+    "pow": 65,
+    "acc": 100,
+    "type": "Ice",
+    "priority": 0,
+    "crit": 0
+  },
+  "Barrier": {
+    "index": 112,
+    "name": "Barrier",
+    "pp": 32,
+    "pow": 0,
+    "acc": 0,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Barrage": {
+    "index": 140,
+    "name": "Barrage",
+    "pp": 32,
+    "pow": 15,
+    "acc": 85,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Bind": {
+    "index": 20,
+    "name": "Bind",
+    "pp": 32,
+    "pow": 15,
+    "acc": 85,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Bite": {
+    "index": 44,
+    "name": "Bite",
+    "pp": 40,
+    "pow": 60,
+    "acc": 100,
+    "type": "Dark",
+    "priority": 0,
+    "crit": 0
+  },
+  "Blizzard": {
+    "index": 59,
+    "name": "Blizzard",
+    "pp": 8,
+    "pow": 110,
+    "acc": 70,
+    "type": "Ice",
+    "priority": 0,
+    "crit": 0
+  },
+  "Bide": {
+    "index": 117,
+    "name": "Bide",
+    "pp": 16,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 1,
+    "crit": 0
+  },
+  "Body Slam": {
+    "index": 34,
+    "name": "Body Slam",
+    "pp": 24,
+    "pow": 85,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Bonemerang": {
+    "index": 155,
+    "name": "Bonemerang",
+    "pp": 16,
+    "pow": 50,
+    "acc": 90,
+    "type": "Ground",
+    "priority": 0,
+    "crit": 0
+  },
+  "Bone Club": {
+    "index": 125,
+    "name": "Bone Club",
+    "pp": 32,
+    "pow": 65,
+    "acc": 85,
+    "type": "Ground",
+    "priority": 0,
+    "crit": 0
+  },
+  "Bubble": {
+    "index": 145,
+    "name": "Bubble",
+    "pp": 48,
+    "pow": 40,
+    "acc": 100,
+    "type": "Water",
+    "priority": 0,
+    "crit": 0
+  },
+  "Bubble Beam": {
+    "index": 61,
+    "name": "Bubble Beam",
+    "pp": 32,
+    "pow": 65,
+    "acc": 100,
+    "type": "Water",
+    "priority": 0,
+    "crit": 0
+  },
+  "Clamp": {
+    "index": 128,
+    "name": "Clamp",
+    "pp": 24,
+    "pow": 35,
+    "acc": 85,
+    "type": "Water",
+    "priority": 0,
+    "crit": 0
+  },
+  "Comet Punch": {
+    "index": 4,
+    "name": "Comet Punch",
+    "pp": 24,
+    "pow": 18,
+    "acc": 85,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Confuse Ray": {
+    "index": 109,
+    "name": "Confuse Ray",
+    "pp": 16,
+    "pow": 0,
+    "acc": 100,
+    "type": "Ghost",
+    "priority": 0,
+    "crit": 0
+  },
+  "Confusion": {
+    "index": 93,
+    "name": "Confusion",
+    "pp": 40,
+    "pow": 50,
+    "acc": 100,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Constrict": {
+    "index": 132,
+    "name": "Constrict",
+    "pp": 56,
+    "pow": 10,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Conversion": {
+    "index": 160,
+    "name": "Conversion",
+    "pp": 48,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Counter": {
+    "index": 68,
+    "name": "Counter",
+    "pp": 32,
+    "pow": 0,
+    "acc": 100,
+    "type": "Fighting",
+    "priority": -5,
+    "crit": 0
+  },
+  "Crabhammer": {
+    "index": 152,
+    "name": "Crabhammer",
+    "pp": 16,
+    "pow": 100,
+    "acc": 90,
+    "type": "Water",
+    "priority": 0,
+    "crit": 1
+  },
+  "Cut": {
+    "index": 15,
+    "name": "Cut",
+    "pp": 48,
+    "pow": 50,
+    "acc": 95,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Defense Curl": {
+    "index": 111,
+    "name": "Defense Curl",
+    "pp": 64,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Dig": {
+    "index": 91,
+    "name": "Dig",
+    "pp": 16,
+    "pow": 80,
+    "acc": 100,
+    "type": "Ground",
+    "priority": 0,
+    "crit": 0
+  },
+  "Disable": {
+    "index": 50,
+    "name": "Disable",
+    "pp": 32,
+    "pow": 0,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Double-Edge": {
+    "index": 38,
+    "name": "Double-Edge",
+    "pp": 24,
+    "pow": 120,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Dizzy Punch": {
+    "index": 146,
+    "name": "Dizzy Punch",
+    "pp": 16,
+    "pow": 70,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Double Kick": {
+    "index": 24,
+    "name": "Double Kick",
+    "pp": 48,
+    "pow": 30,
+    "acc": 100,
+    "type": "Fighting",
+    "priority": 0,
+    "crit": 0
+  },
+  "Double Slap": {
+    "index": 3,
+    "name": "Double Slap",
+    "pp": 16,
+    "pow": 15,
+    "acc": 85,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Double Team": {
+    "index": 104,
+    "name": "Double Team",
+    "pp": 24,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Dragon Rage": {
+    "index": 82,
+    "name": "Dragon Rage",
+    "pp": 16,
+    "pow": 0,
+    "acc": 100,
+    "type": "Dragon",
+    "priority": 0,
+    "crit": 0
+  },
+  "Dream Eater": {
+    "index": 138,
+    "name": "Dream Eater",
+    "pp": 24,
+    "pow": 100,
+    "acc": 100,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Drill Peck": {
+    "index": 65,
+    "name": "Drill Peck",
+    "pp": 32,
+    "pow": 80,
+    "acc": 100,
+    "type": "Flying",
+    "priority": 0,
+    "crit": 0
+  },
+  "Earthquake": {
+    "index": 89,
+    "name": "Earthquake",
+    "pp": 16,
+    "pow": 100,
+    "acc": 100,
+    "type": "Ground",
+    "priority": 0,
+    "crit": 0
+  },
+  "Egg Bomb": {
+    "index": 121,
+    "name": "Egg Bomb",
+    "pp": 16,
+    "pow": 100,
+    "acc": 75,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Ember": {
+    "index": 52,
+    "name": "Ember",
+    "pp": 40,
+    "pow": 40,
+    "acc": 100,
+    "type": "Fire",
+    "priority": 0,
+    "crit": 0
+  },
+  "Explosion": {
+    "index": 153,
+    "name": "Explosion",
+    "pp": 8,
+    "pow": 250,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Fire Blast": {
+    "index": 126,
+    "name": "Fire Blast",
+    "pp": 8,
+    "pow": 110,
+    "acc": 85,
+    "type": "Fire",
+    "priority": 0,
+    "crit": 0
+  },
+  "Fire Spin": {
+    "index": 83,
+    "name": "Fire Spin",
+    "pp": 24,
+    "pow": 35,
+    "acc": 85,
+    "type": "Fire",
+    "priority": 0,
+    "crit": 0
+  },
+  "Fire Punch": {
+    "index": 7,
+    "name": "Fire Punch",
+    "pp": 24,
+    "pow": 75,
+    "acc": 100,
+    "type": "Fire",
+    "priority": 0,
+    "crit": 0
+  },
+  "Fissure": {
+    "index": 90,
+    "name": "Fissure",
+    "pp": 8,
+    "pow": 0,
+    "acc": 0,
+    "type": "Ground",
+    "priority": 0,
+    "crit": 0
+  },
+  "Flamethrower": {
+    "index": 53,
+    "name": "Flamethrower",
+    "pp": 24,
+    "pow": 90,
+    "acc": 100,
+    "type": "Fire",
+    "priority": 0,
+    "crit": 0
+  },
+  "Flash": {
+    "index": 148,
+    "name": "Flash",
+    "pp": 32,
+    "pow": 0,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Focus Energy": {
+    "index": 116,
+    "name": "Focus Energy",
+    "pp": 48,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Fly": {
+    "index": 19,
+    "name": "Fly",
+    "pp": 24,
+    "pow": 90,
+    "acc": 95,
+    "type": "Flying",
+    "priority": 0,
+    "crit": 0
+  },
+  "Fury Attack": {
+    "index": 31,
+    "name": "Fury Attack",
+    "pp": 32,
+    "pow": 15,
+    "acc": 85,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Fury Swipes": {
+    "index": 154,
+    "name": "Fury Swipes",
+    "pp": 24,
+    "pow": 18,
+    "acc": 80,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Glare": {
+    "index": 137,
+    "name": "Glare",
+    "pp": 48,
+    "pow": 0,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Growth": {
+    "index": 74,
+    "name": "Growth",
+    "pp": 32,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Growl": {
+    "index": 45,
+    "name": "Growl",
+    "pp": 64,
+    "pow": 0,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Guillotine": {
+    "index": 12,
+    "name": "Guillotine",
+    "pp": 8,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Gust": {
+    "index": 16,
+    "name": "Gust",
+    "pp": 56,
+    "pow": 40,
+    "acc": 100,
+    "type": "Flying",
+    "priority": 0,
+    "crit": 0
+  },
+  "Harden": {
+    "index": 106,
+    "name": "Harden",
+    "pp": 48,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Haze": {
+    "index": 114,
+    "name": "Haze",
+    "pp": 48,
+    "pow": 0,
+    "acc": 0,
+    "type": "Ice",
+    "priority": 0,
+    "crit": 0
+  },
+  "Headbutt": {
+    "index": 29,
+    "name": "Headbutt",
+    "pp": 24,
+    "pow": 70,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "High Jump Kick": {
+    "index": 136,
+    "name": "High Jump Kick",
+    "pp": 16,
+    "pow": 130,
+    "acc": 90,
+    "type": "Fighting",
+    "priority": 0,
+    "crit": 0
+  },
+  "Horn Attack": {
+    "index": 30,
+    "name": "Horn Attack",
+    "pp": 40,
+    "pow": 65,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Horn Drill": {
+    "index": 32,
+    "name": "Horn Drill",
+    "pp": 8,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Hydro Pump": {
+    "index": 56,
+    "name": "Hydro Pump",
+    "pp": 8,
+    "pow": 110,
+    "acc": 80,
+    "type": "Water",
+    "priority": 0,
+    "crit": 0
+  },
+  "Hyper Beam": {
+    "index": 63,
+    "name": "Hyper Beam",
+    "pp": 8,
+    "pow": 150,
+    "acc": 90,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Hyper Fang": {
+    "index": 158,
+    "name": "Hyper Fang",
+    "pp": 24,
+    "pow": 80,
+    "acc": 90,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Hypnosis": {
+    "index": 95,
+    "name": "Hypnosis",
+    "pp": 32,
+    "pow": 0,
+    "acc": 60,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Ice Beam": {
+    "index": 58,
+    "name": "Ice Beam",
+    "pp": 16,
+    "pow": 90,
+    "acc": 100,
+    "type": "Ice",
+    "priority": 0,
+    "crit": 0
+  },
+  "Ice Punch": {
+    "index": 8,
+    "name": "Ice Punch",
+    "pp": 24,
+    "pow": 75,
+    "acc": 100,
+    "type": "Ice",
+    "priority": 0,
+    "crit": 0
+  },
+  "Jump Kick": {
+    "index": 26,
+    "name": "Jump Kick",
+    "pp": 16,
+    "pow": 100,
+    "acc": 95,
+    "type": "Fighting",
+    "priority": 0,
+    "crit": 0
+  },
+  "Karate Chop": {
+    "index": 2,
+    "name": "Karate Chop",
+    "pp": 40,
+    "pow": 50,
+    "acc": 100,
+    "type": "Fighting",
+    "priority": 0,
+    "crit": 1
+  },
+  "Kinesis": {
+    "index": 134,
+    "name": "Kinesis",
+    "pp": 24,
+    "pow": 0,
+    "acc": 80,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Leech Life": {
+    "index": 141,
+    "name": "Leech Life",
+    "pp": 24,
+    "pow": 20,
+    "acc": 100,
+    "type": "Bug",
+    "priority": 0,
+    "crit": 0
+  },
+  "Leech Seed": {
+    "index": 73,
+    "name": "Leech Seed",
+    "pp": 16,
+    "pow": 0,
+    "acc": 90,
+    "type": "Grass",
+    "priority": 0,
+    "crit": 0
+  },
+  "Leer": {
+    "index": 43,
+    "name": "Leer",
+    "pp": 48,
+    "pow": 0,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Lick": {
+    "index": 122,
+    "name": "Lick",
+    "pp": 48,
+    "pow": 30,
+    "acc": 100,
+    "type": "Ghost",
+    "priority": 0,
+    "crit": 0
+  },
+  "Light Screen": {
+    "index": 113,
+    "name": "Light Screen",
+    "pp": 48,
+    "pow": 0,
+    "acc": 0,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Low Kick": {
+    "index": 67,
+    "name": "Low Kick",
+    "pp": 32,
+    "pow": 0,
+    "acc": 100,
+    "type": "Fighting",
+    "priority": 0,
+    "crit": 0
+  },
+  "Mega Kick": {
+    "index": 25,
+    "name": "Mega Kick",
+    "pp": 8,
+    "pow": 120,
+    "acc": 75,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Mega Drain": {
+    "index": 72,
+    "name": "Mega Drain",
+    "pp": 24,
+    "pow": 40,
+    "acc": 100,
+    "type": "Grass",
+    "priority": 0,
+    "crit": 0
+  },
+  "Meditate": {
+    "index": 96,
+    "name": "Meditate",
+    "pp": 64,
+    "pow": 0,
+    "acc": 0,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Mega Punch": {
+    "index": 5,
+    "name": "Mega Punch",
+    "pp": 32,
+    "pow": 80,
+    "acc": 85,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Metronome": {
+    "index": 118,
+    "name": "Metronome",
+    "pp": 16,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Mimic": {
+    "index": 102,
+    "name": "Mimic",
+    "pp": 16,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Minimize": {
+    "index": 107,
+    "name": "Minimize",
+    "pp": 16,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Mirror Move": {
+    "index": 119,
+    "name": "Mirror Move",
+    "pp": 32,
+    "pow": 0,
+    "acc": 0,
+    "type": "Flying",
+    "priority": 0,
+    "crit": 0
+  },
+  "Mist": {
+    "index": 54,
+    "name": "Mist",
+    "pp": 48,
+    "pow": 0,
+    "acc": 0,
+    "type": "Ice",
+    "priority": 0,
+    "crit": 0
+  },
+  "Night Shade": {
+    "index": 101,
+    "name": "Night Shade",
+    "pp": 24,
+    "pow": 0,
+    "acc": 100,
+    "type": "Ghost",
+    "priority": 0,
+    "crit": 0
+  },
+  "Lovely Kiss": {
+    "index": 142,
+    "name": "Lovely Kiss",
+    "pp": 16,
+    "pow": 0,
+    "acc": 75,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Pay Day": {
+    "index": 6,
+    "name": "Pay Day",
+    "pp": 32,
+    "pow": 40,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Peck": {
+    "index": 64,
+    "name": "Peck",
+    "pp": 56,
+    "pow": 35,
+    "acc": 100,
+    "type": "Flying",
+    "priority": 0,
+    "crit": 0
+  },
+  "Petal Dance": {
+    "index": 80,
+    "name": "Petal Dance",
+    "pp": 16,
+    "pow": 120,
+    "acc": 100,
+    "type": "Grass",
+    "priority": 0,
+    "crit": 0
+  },
+  "Pin Missile": {
+    "index": 42,
+    "name": "Pin Missile",
+    "pp": 32,
+    "pow": 25,
+    "acc": 95,
+    "type": "Bug",
+    "priority": 0,
+    "crit": 0
+  },
+  "Poison Gas": {
+    "index": 139,
+    "name": "Poison Gas",
+    "pp": 64,
+    "pow": 0,
+    "acc": 90,
+    "type": "Poison",
+    "priority": 0,
+    "crit": 0
+  },
+  "Poison Powder": {
+    "index": 77,
+    "name": "Poison Powder",
+    "pp": 56,
+    "pow": 0,
+    "acc": 75,
+    "type": "Poison",
+    "priority": 0,
+    "crit": 0
+  },
+  "Poison Sting": {
+    "index": 40,
+    "name": "Poison Sting",
+    "pp": 56,
+    "pow": 15,
+    "acc": 100,
+    "type": "Poison",
+    "priority": 0,
+    "crit": 0
+  },
+  "Pound": {
+    "index": 1,
+    "name": "Pound",
+    "pp": 56,
+    "pow": 40,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Psybeam": {
+    "index": 60,
+    "name": "Psybeam",
+    "pp": 32,
+    "pow": 65,
+    "acc": 100,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Psychic": {
+    "index": 94,
+    "name": "Psychic",
+    "pp": 16,
+    "pow": 90,
+    "acc": 100,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Psywave": {
+    "index": 149,
+    "name": "Psywave",
+    "pp": 24,
+    "pow": 0,
+    "acc": 100,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Rage": {
+    "index": 99,
+    "name": "Rage",
+    "pp": 32,
+    "pow": 20,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Quick Attack": {
+    "index": 98,
+    "name": "Quick Attack",
+    "pp": 48,
+    "pow": 40,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 1,
+    "crit": 0
+  },
+  "Razor Leaf": {
+    "index": 75,
+    "name": "Razor Leaf",
+    "pp": 40,
+    "pow": 55,
+    "acc": 95,
+    "type": "Grass",
+    "priority": 0,
+    "crit": 0
+  },
+  "Razor Wind": {
+    "index": 13,
+    "name": "Razor Wind",
+    "pp": 16,
+    "pow": 80,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 1
+  },
+  "Recover": {
+    "index": 105,
+    "name": "Recover",
+    "pp": 16,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Reflect": {
+    "index": 115,
+    "name": "Reflect",
+    "pp": 32,
+    "pow": 0,
+    "acc": 0,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Rest": {
+    "index": 156,
+    "name": "Rest",
+    "pp": 16,
+    "pow": 0,
+    "acc": 0,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Roar": {
+    "index": 46,
+    "name": "Roar",
+    "pp": 32,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": -6,
+    "crit": 0
+  },
+  "Rock Slide": {
+    "index": 157,
+    "name": "Rock Slide",
+    "pp": 16,
+    "pow": 75,
+    "acc": 90,
+    "type": "Rock",
+    "priority": 0,
+    "crit": 0
+  },
+  "Rock Throw": {
+    "index": 88,
+    "name": "Rock Throw",
+    "pp": 24,
+    "pow": 50,
+    "acc": 90,
+    "type": "Rock",
+    "priority": 0,
+    "crit": 0
+  },
+  "Rolling Kick": {
+    "index": 27,
+    "name": "Rolling Kick",
+    "pp": 24,
+    "pow": 60,
+    "acc": 85,
+    "type": "Fighting",
+    "priority": 0,
+    "crit": 0
+  },
+  "Sand Attack": {
+    "index": 28,
+    "name": "Sand Attack",
+    "pp": 24,
+    "pow": 0,
+    "acc": 100,
+    "type": "Ground",
+    "priority": 0,
+    "crit": 0
+  },
+  "Scratch": {
+    "index": 10,
+    "name": "Scratch",
+    "pp": 56,
+    "pow": 40,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Screech": {
+    "index": 103,
+    "name": "Screech",
+    "pp": 64,
+    "pow": 0,
+    "acc": 85,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Seismic Toss": {
+    "index": 69,
+    "name": "Seismic Toss",
+    "pp": 32,
+    "pow": 0,
+    "acc": 100,
+    "type": "Fighting",
+    "priority": 0,
+    "crit": 0
+  },
+  "Self-Destruct": {
+    "index": 120,
+    "name": "Self-Destruct",
+    "pp": 8,
+    "pow": 200,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Sharpen": {
+    "index": 159,
+    "name": "Sharpen",
+    "pp": 48,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Sing": {
+    "index": 47,
+    "name": "Sing",
+    "pp": 24,
+    "pow": 0,
+    "acc": 55,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Sky Attack": {
+    "index": 143,
+    "name": "Sky Attack",
+    "pp": 8,
+    "pow": 140,
+    "acc": 90,
+    "type": "Flying",
+    "priority": 0,
+    "crit": 1
+  },
+  "Skull Bash": {
+    "index": 130,
+    "name": "Skull Bash",
+    "pp": 16,
+    "pow": 130,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Slam": {
+    "index": 21,
+    "name": "Slam",
+    "pp": 32,
+    "pow": 80,
+    "acc": 75,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Sleep Powder": {
+    "index": 79,
+    "name": "Sleep Powder",
+    "pp": 24,
+    "pow": 0,
+    "acc": 75,
+    "type": "Grass",
+    "priority": 0,
+    "crit": 0
+  },
+  "Sludge": {
+    "index": 124,
+    "name": "Sludge",
+    "pp": 32,
+    "pow": 65,
+    "acc": 100,
+    "type": "Poison",
+    "priority": 0,
+    "crit": 0
+  },
+  "Slash": {
+    "index": 163,
+    "name": "Slash",
+    "pp": 32,
+    "pow": 70,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 1
+  },
+  "Smog": {
+    "index": 123,
+    "name": "Smog",
+    "pp": 32,
+    "pow": 30,
+    "acc": 70,
+    "type": "Poison",
+    "priority": 0,
+    "crit": 0
+  },
+  "Smokescreen": {
+    "index": 108,
+    "name": "Smokescreen",
+    "pp": 32,
+    "pow": 0,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Solar Beam": {
+    "index": 76,
+    "name": "Solar Beam",
+    "pp": 16,
+    "pow": 120,
+    "acc": 100,
+    "type": "Grass",
+    "priority": 0,
+    "crit": 0
+  },
+  "Soft-Boiled": {
+    "index": 135,
+    "name": "Soft-Boiled",
+    "pp": 16,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Sonic Boom": {
+    "index": 49,
+    "name": "Sonic Boom",
+    "pp": 32,
+    "pow": 0,
+    "acc": 90,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Spike Cannon": {
+    "index": 131,
+    "name": "Spike Cannon",
+    "pp": 24,
+    "pow": 20,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Splash": {
+    "index": 150,
+    "name": "Splash",
+    "pp": 64,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Spore": {
+    "index": 147,
+    "name": "Spore",
+    "pp": 24,
+    "pow": 0,
+    "acc": 100,
+    "type": "Grass",
+    "priority": 0,
+    "crit": 0
+  },
+  "Stomp": {
+    "index": 23,
+    "name": "Stomp",
+    "pp": 32,
+    "pow": 65,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Strength": {
+    "index": 70,
+    "name": "Strength",
+    "pp": 24,
+    "pow": 80,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "String Shot": {
+    "index": 81,
+    "name": "String Shot",
+    "pp": 64,
+    "pow": 0,
+    "acc": 95,
+    "type": "Bug",
+    "priority": 0,
+    "crit": 0
+  },
+  "Struggle": {
+    "index": 165,
+    "name": "Struggle",
+    "pp": 1,
+    "pow": 50,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Stun Spore": {
+    "index": 78,
+    "name": "Stun Spore",
+    "pp": 48,
+    "pow": 0,
+    "acc": 75,
+    "type": "Grass",
+    "priority": 0,
+    "crit": 0
+  },
+  "Submission": {
+    "index": 66,
+    "name": "Submission",
+    "pp": 40,
+    "pow": 80,
+    "acc": 80,
+    "type": "Fighting",
+    "priority": 0,
+    "crit": 0
+  },
+  "Substitute": {
+    "index": 164,
+    "name": "Substitute",
+    "pp": 16,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Super Fang": {
+    "index": 162,
+    "name": "Super Fang",
+    "pp": 16,
+    "pow": 0,
+    "acc": 90,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Surf": {
+    "index": 57,
+    "name": "Surf",
+    "pp": 24,
+    "pow": 90,
+    "acc": 100,
+    "type": "Water",
+    "priority": 0,
+    "crit": 0
+  },
+  "Supersonic": {
+    "index": 48,
+    "name": "Supersonic",
+    "pp": 32,
+    "pow": 0,
+    "acc": 55,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Swift": {
+    "index": 129,
+    "name": "Swift",
+    "pp": 32,
+    "pow": 60,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Swords Dance": {
+    "index": 14,
+    "name": "Swords Dance",
+    "pp": 32,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Tackle": {
+    "index": 33,
+    "name": "Tackle",
+    "pp": 56,
+    "pow": 50,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Tail Whip": {
+    "index": 39,
+    "name": "Tail Whip",
+    "pp": 48,
+    "pow": 0,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Take Down": {
+    "index": 36,
+    "name": "Take Down",
+    "pp": 32,
+    "pow": 90,
+    "acc": 85,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Teleport": {
+    "index": 100,
+    "name": "Teleport",
+    "pp": 32,
+    "pow": 0,
+    "acc": 0,
+    "type": "Psychic",
+    "priority": 0,
+    "crit": 0
+  },
+  "Thunder": {
+    "index": 87,
+    "name": "Thunder",
+    "pp": 16,
+    "pow": 110,
+    "acc": 70,
+    "type": "Electric",
+    "priority": 0,
+    "crit": 0
+  },
+  "Thrash": {
+    "index": 37,
+    "name": "Thrash",
+    "pp": 16,
+    "pow": 120,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Thunder Punch": {
+    "index": 9,
+    "name": "Thunder Punch",
+    "pp": 24,
+    "pow": 75,
+    "acc": 100,
+    "type": "Electric",
+    "priority": 0,
+    "crit": 0
+  },
+  "Thunder Wave": {
+    "index": 86,
+    "name": "Thunder Wave",
+    "pp": 32,
+    "pow": 0,
+    "acc": 100,
+    "type": "Electric",
+    "priority": 0,
+    "crit": 0
+  },
+  "Thunder Shock": {
+    "index": 84,
+    "name": "Thunder Shock",
+    "pp": 48,
+    "pow": 40,
+    "acc": 100,
+    "type": "Electric",
+    "priority": 0,
+    "crit": 0
+  },
+  "Thunderbolt": {
+    "index": 85,
+    "name": "Thunderbolt",
+    "pp": 24,
+    "pow": 90,
+    "acc": 100,
+    "type": "Electric",
+    "priority": 0,
+    "crit": 0
+  },
+  "Toxic": {
+    "index": 92,
+    "name": "Toxic",
+    "pp": 16,
+    "pow": 0,
+    "acc": 90,
+    "type": "Poison",
+    "priority": 0,
+    "crit": 0
+  },
+  "Transform": {
+    "index": 144,
+    "name": "Transform",
+    "pp": 16,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Tri Attack": {
+    "index": 161,
+    "name": "Tri Attack",
+    "pp": 16,
+    "pow": 80,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Twineedle": {
+    "index": 41,
+    "name": "Twineedle",
+    "pp": 32,
+    "pow": 25,
+    "acc": 100,
+    "type": "Bug",
+    "priority": 0,
+    "crit": 0
+  },
+  "Vice Grip": {
+    "index": 11,
+    "name": "Vice Grip",
+    "pp": 48,
+    "pow": 55,
+    "acc": 100,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  },
+  "Vine Whip": {
+    "index": 22,
+    "name": "Vine Whip",
+    "pp": 40,
+    "pow": 45,
+    "acc": 100,
+    "type": "Grass",
+    "priority": 0,
+    "crit": 0
+  },
+  "Water Gun": {
+    "index": 55,
+    "name": "Water Gun",
+    "pp": 40,
+    "pow": 40,
+    "acc": 100,
+    "type": "Water",
+    "priority": 0,
+    "crit": 0
+  },
+  "Whirlwind": {
+    "index": 18,
+    "name": "Whirlwind",
+    "pp": 32,
+    "pow": 0,
+    "acc": 0,
+    "type": "Normal",
+    "priority": -6,
+    "crit": 0
+  },
+  "Waterfall": {
+    "index": 127,
+    "name": "Waterfall",
+    "pp": 24,
+    "pow": 80,
+    "acc": 100,
+    "type": "Water",
+    "priority": 0,
+    "crit": 0
+  },
+  "Wing Attack": {
+    "index": 17,
+    "name": "Wing Attack",
+    "pp": 56,
+    "pow": 60,
+    "acc": 100,
+    "type": "Flying",
+    "priority": 0,
+    "crit": 0
+  },
+  "Withdraw": {
+    "index": 110,
+    "name": "Withdraw",
+    "pp": 64,
+    "pow": 0,
+    "acc": 0,
+    "type": "Water",
+    "priority": 0,
+    "crit": 0
+  },
+  "Wrap": {
+    "index": 35,
+    "name": "Wrap",
+    "pp": 32,
+    "pow": 15,
+    "acc": 90,
+    "type": "Normal",
+    "priority": 0,
+    "crit": 0
+  }
+}
