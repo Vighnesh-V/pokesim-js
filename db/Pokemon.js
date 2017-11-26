@@ -4,7 +4,7 @@ var movedex = require('./movedex.json');
 
 function generateMoveset (learnables, level) {
 	var possible = learnables.filter(function (move) {
-		return move.level <= level;
+		return (move.level <= level + 7);
 	});
 
 	var shuffled = possible.sort(() => .5 - Math.random());// shuffle  
@@ -15,8 +15,7 @@ function generateMoveset (learnables, level) {
 var Pokemon = function Pokemon(trainer,ID) {
 	this.level = 5;
 	this.trainer = trainer;
-	console.log(pokedex[ID].learnable);
-	var learnables = pokedex[ID].learnable;
+	var learnables = pokedex[ID - 1].learnable;
 	learnables = learnables.filter(function (move) {
 		if (movedex[move.move] === undefined) {
 			return false;
@@ -25,13 +24,14 @@ var Pokemon = function Pokemon(trainer,ID) {
 		}
 	});
 	this.learnable = learnables;
-	this.evolutions = pokedex[ID].evos;
-	this.bstats = pokedex[ID].bstats;
-	this.name = pokedex[ID].name;
+	this.evolutions = pokedex[ID-1].evos;
+	this.bstats = pokedex[ID-1].bstats;
+	this.name = pokedex[ID-1].name;
 	this.id = ID;
-	this.types = pokedex[ID].types
+	this.types = pokedex[ID-1].types
 	this.moveset = generateMoveset(this.learnable, this.level);
 
 } 
+
 
 module.exports = Pokemon;

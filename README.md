@@ -2,8 +2,13 @@
 
 Installation instructions:
 
-run npm install.
+1. Clone directory and run npm install.
 
-Open 3 terminal windows - in one run mongod, the other run npm start and the third run gulp (although everything is precompiled :).
+2. Open two terminal windows.
 
-Navigate to localhost3000 and have fun!
+3. Run ```npm start``` and ```mongod```
+	* If this doesn't work, run ```node app.js``` and ```node server.js``` separately.
+
+4. Navigate to localhost:3000 and enter your username (if you have none, one will be created for you). 
+
+5. Re-enter your name if this is the first time - and proceed to have fun!
