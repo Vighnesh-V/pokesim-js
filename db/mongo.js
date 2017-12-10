@@ -27,7 +27,8 @@ var PokemonSchema = new mongoose.Schema({
 var TrainerSchema = new mongoose.Schema({
 	name: String,
 	prim: PokemonSchema,
-	seco: PokemonSchema
+	seco: PokemonSchema,
+	battles: Number
 });
 
 

@@ -20,6 +20,12 @@ module.exports = {
 		})
 	},
 
+	updatePlayer: function (playerData, callback) {
+		mongo.Trainer.findOneAndUpdate({name: playerData.name}, playerData, function (err, user) {
+
+		});
+	},
+
 	getPlayer: function (player, callback) {
 		mongo.Trainer.find({name: player}, function (err, user) {
 			if (err) {

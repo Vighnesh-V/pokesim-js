@@ -82,6 +82,224 @@ socketServer.on('connection', function (socket) {
         var socketid = socket.broadcast.to(room).emit('message', data);
     });
 
+    socket.on('get_player_secondary', function (data) {
+        console.log('here');
+        pDb.getPlayer(data.name, function (err, result) {
+            if (data.p > 1) {
+                //player deaths have exceeded 2
+                //give no one experience - last pokemon died.
+                var n = result[0].name;
+                var primary = result[0].prim;
+                var secondary = result[0].seco;
+                var battles = result[0].battles;
+                if (battles + 1 === 5) {
+                    //level up:
+                    primary.level = primary.level + 1;
+                    secondary.level = secondary.level + 1;
+
+                    var pmovelist = dex[primary.id - 1].learnable;
+                    var smovelist = dex[secondary.id - 1].learnable;
+                    var pmove;
+                    var smove;
+                    pmovelist = pmovelist.filter(function (move) {
+                        if (move.level == primary.level) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+
+                    smovelist = smovelist.filter(function (move) {
+                        if (move.level === secondary.level) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+
+                    if (pmovelist.length != 0) {
+                        pmove = pmovelist[0].move;
+                    }
+
+                    if (smovelist.length != 0) {
+                        smove = smovelist[0].move;
+                    }
+
+                    pmovelist = primary.moveset;
+                    smovelist = secondary.moveset;
+
+                    pmovelist[3] = pmove;
+                    smovelist[3] = smove;
+
+                    primary.moveset = pmovelist;
+                    secondary.moveset = smovelist;
+
+                    //calculate evolutions
+
+                    var pevolist = dex[primary.id - 1].evos;
+                    var sevolist = dex[secondary.id - 1].evos;
+
+                    pevolist = pevolist.filter(function(evo) {
+                        if (evo.level === primary.level) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+
+                    sevolist = sevolist.filter(function (evo) {
+                        if (evo.level === primary.level) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+
+                    if (pevolist.length > 0) {
+                        primary.id = pevolist[0].id;
+                    }
+
+                    if (sevolist.length > 0) {
+                        secondary.id = sevolist[0].id;
+                    }
+
+                    battles = 0;
+                } else {
+                    battles += 1;
+                }
+
+                var playerData = {
+                    name: n,
+                    prim: primary,
+                    seco: secondary,
+                    battles: battles
+                };
+                pDb.updatePlayer(playerData, function (err) {
+                    console.log('update player side');
+                    
+                });
+
+                socket.emit('game_over');
+            } else {
+                var id = result[0].seco.id;
+                var poke = dex[id - 1].name;
+                var moveset = result[0].seco.moveset;
+                socket.emit('repopulate_player', {
+                    id: id,
+                    name: poke,
+                    moveset: moveset
+                });
+            }
+            
+        });
+    });
+
+    socket.on('get_enemy_secondary', function (data) {
+      if (data.e > 1) {
+        pDb.getPlayer(data.me, function (err, result) {
+            var n = result[0].name;
+            var primary = result[0].prim;
+            var secondary = result[0].seco;
+            var battles = result[0].battles;
+            if (battles + 1 === 5) {
+                //level up:
+                primary.level = primary.level + 1;
+                secondary.level = secondary.level + 1;
+
+                var pmovelist = dex[primary.id - 1].learnable;
+                var smovelist = dex[secondary.id - 1].learnable;
+                var pmove;
+                var smove;
+                pmovelist = pmovelist.filter(function (move) {
+                    if (move.level == primary.level) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+
+                smovelist = smovelist.filter(function (move) {
+                    if (move.level === secondary.level) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+
+                if (pmovelist.length != 0) {
+                    pmove = pmovelist[0].move;
+                }
+
+                if (smovelist.length != 0) {
+                    smove = smovelist[0].move;
+                }
+
+                pmovelist = primary.moveset;
+                smovelist = secondary.moveset;
+
+                pmovelist[3] = pmove;
+                smovelist[3] = smove;
+
+                primary.moveset = pmovelist;
+                secondary.moveset = smovelist;
+
+                //calculate evolutions
+
+                var pevolist = dex[primary.id - 1].evos;
+                var sevolist = dex[secondary.id - 1].evos;
+
+                pevolist = pevolist.filter(function(evo) {
+                    if (evo.level === primary.level) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+
+                sevolist = sevolist.filter(function (evo) {
+                    if (evo.level === primary.level) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+
+                if (pevolist.length > 0) {
+                    primary.id = pevolist[0].id;
+                }
+
+                if (sevolist.length > 0) {
+                    secondary.id = sevolist[0].id;
+                }
+
+                battles = 0;
+            } else {
+                battles += 1;
+            }
+
+            var playerData = {
+                name: n,
+                prim: primary,
+                seco: secondary,
+                battles: battles
+            };
+            pDb.updatePlayer(playerData, function (err) {
+                console.log('updated enemy side');
+            });
+
+            socket.emit('game_over');
+        });
+      } else {
+        pDb.getPlayer(data.name, function (err, result){
+            var id = result[0].seco.id;
+            var poke = dex[id - 1].name;
+            console.log(data.name);
+            socket.emit('repopulate_enemy', {id: id, name: poke});
+        }); 
+      }
+      
+    });
+
     socket.on('move', function(data) {
 
         if (data.numMovesMade == 2) {
@@ -105,10 +323,12 @@ socketServer.on('connection', function (socket) {
             var socket2 = allUsers[player2Socketid];
 
             var P1BATK = dex[player1PokeId - 1]["bstats"][1];
+            var P1BSPD = dex[player1PokeId - 1]["bstats"][4];
             var P2BDEF = dex[player2PokeId - 1]["bstats"][2];
             var P2BHP = dex[player2PokeId - 1]["bstats"][0];
 
             var P2BATK = dex[player2PokeId - 1]["bstats"][1];
+            var P2BSPD = dex[player2PokeId - 1]["bstats"][4];
             var P1BDEF = dex[player1PokeId - 1]["bstats"][2];
             var P1BHP = dex[player1PokeId - 1]["bstats"][0];
 
@@ -133,13 +353,13 @@ socketServer.on('connection', function (socket) {
                     if (res1[0].prim.id === player1PokeId) {
                         P1level = res1[0].prim.level;
                     }  else {
-                        P1level = res1[1].seco.level;
+                        P1level = res1[0].seco.level;
                     }
                     var P2level;
                     if (res2[0].prim.id === player2PokeId) {
                         P2level = res2[0].prim.level;
                     }  else {
-                        P2level = res2[1].seco.level;
+                        P2level = res2[0].seco.level;
                     }
 
                     var P1ATK = OtherStats(P1BATK, P1level);
@@ -149,7 +369,7 @@ socketServer.on('connection', function (socket) {
                     var P2ATK = OtherStats(P2BATK, P2level);
                     var P1DEF = OtherStats(P1BDEF, P1level);
                     var P1HP = HP(P1BHP, P1level); 
-
+                    var r = (Math.random() * (0.15) + 0.85);
                     socket1.emit('update-health', {
                         them: {
                             level: P1level,
@@ -159,7 +379,9 @@ socketServer.on('connection', function (socket) {
                             hp: P2HP,
                             stab: P1STAB,
                             attackingtype: player1MoveType,
-                            deftype:  dex[player2PokeId - 1]["types"]
+                            deftype:  dex[player2PokeId - 1]["types"],
+                            spd : P2BSPD,
+                            name: player2Name
                         },
 
                         me: {
@@ -170,8 +392,12 @@ socketServer.on('connection', function (socket) {
                             hp: P1HP,
                             stab: P2STAB,
                             attackingtype: player2MoveType,
-                            deftype:  dex[player1PokeId - 1]["types"]
-                        }
+                            deftype:  dex[player1PokeId - 1]["types"],
+                            spd: P1BSPD,
+                            name: player1Name
+                        },
+
+                        random: r
                     });
 
                     socket2.emit('update-health', {
@@ -183,7 +409,9 @@ socketServer.on('connection', function (socket) {
                             hp: P2HP,
                             stab: P1STAB,
                             attackingtype: player1MoveType,
-                            deftype:  dex[player2PokeId - 1]["types"]
+                            deftype:  dex[player2PokeId - 1]["types"],
+                            spd: P2BSPD,
+                            name: player2Name
                         },
 
                         them: {
@@ -194,8 +422,12 @@ socketServer.on('connection', function (socket) {
                             hp: P1HP,
                             stab: P2STAB,
                             attackingtype: player2MoveType,
-                            deftype:  dex[player1PokeId - 1]["types"]
-                        }
+                            deftype:  dex[player1PokeId - 1]["types"],
+                            spd: P1BSPD,
+                            name: player1Name
+                        },
+
+                        random: r
                     });
 
                 

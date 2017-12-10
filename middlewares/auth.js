@@ -46,7 +46,7 @@ var checkExistingPlayer = function (req, res, next) {
 				}
 
 				console.log('Key ' + req.query.key + ' is not present!');
-				pDb.addPlayer({name: req.query.key, prim: t1, seco: t2}, function (err) {
+				pDb.addPlayer({name: req.query.key, prim: t1, seco: t2, battles: 0}, function (err) {
 					if (err) {
 						next(err);
 					} else {

@@ -3,6 +3,9 @@
 /* global $, io */
 var movesMade = 0;
 var toSend = {};
+var edeaths = 0;
+var pdeaths = 0;
+var hasPolled = false;
 $(document).ready(function () {
   // This code connects to your server via websocket;
   // please don't modify it.
@@ -152,10 +155,10 @@ var Type = function (at, defender) {
     return y;
 };
 
-var DMG = function(Level, Power, A, D, STAB, Type) {
-    return (((2 * Level / 5 + 2) * Power * (A / D))/ 50 + 2) * modifier(STAB, Type);
+var DMG = function(Level, Power, A, D, STAB, Type, random) {
+    return (((2 * Level / 5 + 2) * Power * (A / D))/ 50 + 2) * modifier(STAB, Type, random);
 };
-var modifier = function (STAB, Type) {return STAB * Type * (Math.random() * (0.15) + 0.85)};
+var modifier = function (STAB, Type, random) {return STAB * Type * random;};
 
 
 
@@ -187,6 +190,15 @@ var modifier = function (STAB, Type) {return STAB * Type * (Math.random() * (0.1
     console.log(data);
   });
 
+  window.socket.on('game_over', function (data) {
+    console.log('GAME OVER');
+    $('#linker').show();
+    $('#m1').prop('disabled', true);
+    $('#m2').prop('disabled', true);
+    $('#m3').prop('disabled', true);
+    $('#m4').prop('disabled', true);
+  });
+
   window.socket.on('populate', function (data) {
     var yourFilePath = data.you.toString();
     var myFilePath = data.me.toString();
@@ -208,6 +220,9 @@ var modifier = function (STAB, Type) {return STAB * Type * (Math.random() * (0.1
     $('#enemytext').text(data.youn);
     $('#playertext').text(data.men);
 
+    $('#e').text("100%");
+    $('#p').text("100%");
+
   });
 
   window.socket.on('increment', function (data) {
@@ -215,43 +230,184 @@ var modifier = function (STAB, Type) {return STAB * Type * (Math.random() * (0.1
     toSend = data;
   });
 
+  window.socket.on('repopulate_enemy', function (data){
+    var id = data.id;
+    var theirFilePath = '/public/front/' + id + '.gif';
+    $('#front').attr('src', theirFilePath);
+    $('#front').data('id', data.id);
+    $('#enemyhealth').data('health', 100);
+    $('#e').text("100%");
+    $('#enemyhealth').width("100%");
+    $('#enemytext').text(data.name);
+  });
+
+  window.socket.on('repopulate_player', function (data){
+    //setting image
+    var id = data.id;
+    var myFilePath = '/public/back/' + id + '.png';
+    $('#back').attr('src', myFilePath);
+
+    $('#back').data('id', data.id); // setting data attribute of field
+    $('#playerhealth').data('health', 100); //setting data health attr
+    $('#p').text("100%"); // setting health view
+    $('#playerhealth').width("100%"); // set new pokemon to full health
+    $('#playertext').text(data.name);
+
+    //setting movesets on buttons
+    var myMoveSet = data.moveset;
+    $('#m1').text(myMoveSet[0]);
+    $('#m2').text(myMoveSet[1]);
+    $('#m3').text(myMoveSet[2]);
+    $('#m4').text(myMoveSet[3]);
+  });
+
   window.socket.on('update-health', function (data) {
     //working out damage dealt to them
     var typeBonus = Type(data.them.attackingtype, data.them.deftype);
-    var dmg = DMG(data.them.level, data.them.power, data.them.atk, data.them.def, data.them.stab, typeBonus);
+    var dmg = DMG(data.them.level, data.them.power, data.them.atk, data.them.def, data.them.stab, typeBonus, data.random);
 
     var percentHealth = Number($('#enemyhealth').data('health'));
 
     var curHealth = data.them.hp * (percentHealth / 100);
     var newHealth = Math.floor((curHealth - dmg) / data.them.hp * 100);
-    console.log(percentHealth);
-    console.log(curHealth);
-    console.log(dmg);
-    console.log(newHealth);
-    $('#enemyhealth').data('health', newHealth);
-    var newhstr = newHealth + '%'; 
-
-    $('#enemyhealth').width(newhstr);
+    if (newHealth <= 0) {
+      newHealth = 0;
+    }
+    
 
     //working out damage dealt to me
     var typeBonus1 = Type(data.me.attackingtype, data.me.deftype);
-    var dmg1 = DMG(data.me.level, data.me.power, data.me.atk, data.me.def, data.me.stab, typeBonus1);
+    var dmg1 = DMG(data.me.level, data.me.power, data.me.atk, data.me.def, data.me.stab, typeBonus1, data.random);
     var percentHealth1 = Number($('#playerhealth').data('health'));
     var curHealth1 = data.me.hp * percentHealth1 / 100;
     var newHealth1 = Math.floor((curHealth1 - dmg1) / data.me.hp * 100);
-    $('#playerhealth').data('health', newHealth1);
-    var newhstr1 = newHealth1 + '%'; 
-    $('#playerhealth').width(newhstr1);
-    //
+    if (newHealth1 <= 0) {
+      newHealth1 = 0;
+    }
+    
+    //break spd ties here
+    if (data.me.spd === data.them.spd) {
+      var rand = (data.random - 0.85) / 0.15;
+      if (rand >= 0.5) {
+        data.me.spd = data.me.spd + 1;
+      } else {
+        data.them.spd = data.them.spd + 1;
+      }
+    }
+    console.log('My health: ' + newHealth1 );
+    console.log('Their health: ' + newHealth);
+    //work out speed ties here!
+    //I win speed tie
+    if (data.me.spd > data.them.spd) {
+      console.log('speed tie won');
+      //I win speed tie
+      if (newHealth === 0) {
+        $('#enemyhealth').data('health', newHealth);
+        var newhstr = newHealth + '%'; 
+        $('#enemyhealth').width(newhstr);
+        $('#e').text(newhstr);
+        //i won speed and got them
+        edeaths += 1;
+        console.log(data.them.name);
+        window.socket.emit('get_enemy_secondary', {
+          name: data.them.name,
+          me: data.me.name,
+          e: edeaths,
+          p: pdeaths
+        });
+        console.log('Won Speed tie and killed them');
+      } else if (newHealth1 === 0) {
+        $('#playerhealth').data('health', newHealth1);
+        var newhstr1 = newHealth1 + '%'; 
+        $('#playerhealth').width(newhstr1);
+        $('#p').text(newhstr1);
+
+        $('#enemyhealth').data('health', newHealth);
+        var newhstr = newHealth + '%'; 
+        $('#enemyhealth').width(newhstr);
+        $('#e').text(newhstr);
+        console.log(data.me.name);
+        pdeaths += 1;
+        window.socket.emit('get_player_secondary', {
+          name: data.me.name,
+          p: pdeaths,
+          e: edeaths
+        });
+        console.log('Won Speed Tie but died');
+       
+        //I won speed but they got me
+      } else {
+        $('#enemyhealth').data('health', newHealth);
+        var newhstr = newHealth + '%'; 
+        $('#enemyhealth').width(newhstr);
+        $('#e').text(newhstr);
+
+        $('#playerhealth').data('health', newHealth1);
+        var newhstr1 = newHealth1 + '%'; 
+        $('#playerhealth').width(newhstr1);
+        $('#p').text(newhstr1);
+      }
+    }
+    //they win speed tie
+    if (data.me.spd < data.them.spd) {
+       console.log('speed tie lost');
+      if (newHealth1 === 0) {
+        $('#playerhealth').data('health', newHealth1);
+        var newhstr1 = newHealth1 + '%'; 
+        $('#playerhealth').width(newhstr1);
+        $('#p').text(newhstr1);
+        console.log(data.me.name);
+        pdeaths += 1;
+        window.socket.emit('get_player_secondary', {
+          name: data.me.name,
+          p: pdeaths,
+          e: edeaths
+        });
+        console.log('Lost speed tie and died');
+        
+        // I lost speed and they got me
+      } else if (newHealth === 0) { 
+        $('#enemyhealth').data('health', newHealth);
+        var newhstr = newHealth + '%'; 
+        $('#enemyhealth').width(newhstr);
+        $('#e').text(newhstr);
+
+        $('#playerhealth').data('health', newHealth1);
+        var newhstr1 = newHealth1 + '%'; 
+        $('#playerhealth').width(newhstr1);
+        $('#p').text(newhstr1);
+        console.log(data.them.name);
+        edeaths += 1;
+        window.socket.emit('get_enemy_secondary', {
+          name: data.them.name,
+          me: data.me.name,
+          e: edeaths,
+          p: pdeaths
+        });
+        console.log('Lost speed tie and got them');
+        
+        //i lost speed but got them
+      } else {
+        $('#enemyhealth').data('health', newHealth);
+        var newhstr = newHealth + '%'; 
+        $('#enemyhealth').width(newhstr);
+        $('#e').text(newhstr);
+
+        $('#playerhealth').data('health', newHealth1);
+        var newhstr1 = newHealth1 + '%'; 
+        $('#playerhealth').width(newhstr1);
+        $('#p').text(newhstr1);
+      }
+    }
+
+
     movesMade = 0;
     toSend = {};
-    console.log('updated');
 
     $('#m1').prop('disabled', false);
     $('#m2').prop('disabled', false);
     $('#m3').prop('disabled', false);
     $('#m4').prop('disabled', false);
-    $('#switch').prop('disabled', false);
 
   });
 
