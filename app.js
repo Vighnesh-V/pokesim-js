@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 var battleRouter = require('./routes/battleRouter');
-var handleError = require('./middlewares/handleError');
+
 //set port, set view folder, set render engine, use ejs
 app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/views'));
@@ -12,6 +12,4 @@ app.set('view engine', 'html');
 app.get('/', (req, res) => res.render('index'));
 app.get('/battle', battleRouter);
 
-
-//app.use(handleError);
 app.listen(3000, () => console.log('Listening on port 3000!'));

@@ -1,0 +1,52 @@
+.progress {
+  width:400px;
+}
+
+.enemy {
+  margin-left: 300px;
+}
+
+.player {
+  margin-top: 60px;
+  margin-bottom: -10px;
+  margin-left: 20px;
+}
+
+#enemytext {
+  margin-left: 300px;
+}
+
+#playertext {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+body {
+  background-color: white;
+}
+
+h1 {
+  margin-left: 40px;
+  font-size: 35px;
+}
+
+h1 {
+  margin-left: 40px;
+  font-size: 30px;
+}
+
+img {
+  height: 96px;
+  width: 96px;
+}
+img {
+  height: 96px;
+  width: 96px;
+}
+
+
+
+
+
+
+

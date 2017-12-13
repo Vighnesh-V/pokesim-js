@@ -9,31 +9,33 @@
 			<!-- These are my files-->
 			<script src="/public/socket.min.js"></script>
 <script src="/public/client.js"></script>
-<link rel= "stylesheet" type="text/css" href="/js/style.css">
+<link rel= "stylesheet" type="text/css" href="/public/style.css">
 
 </head>
 	<body>
-	<!--<div id="player">
+	<div id="player">
     <audio autoplay hidden loop>
-     <source src="/js/battle.mp3" type="audio/mpeg">
+     <source src="/public/battle.mp3" type="audio/mpeg">
                 If you're reading this, audio isn't supported. 
     </audio>
-</div> -->
+</div> 
 	<h2 style="visibility:hidden"><%=user%></h2>
 	<h1>Battle!</h1>
 	<a id = 'linker' href = '/'>Go Back</a>
-	<div id = 'container'>
-		<p id = 'enemytext'>Venusaur</p>
-
+	<div id = 'container' class = 'ui container'>
+    <div id = 'enemytext' class = 'ui big red label'>Venusaur</div>
 		<div class="ui teal small progress">
   			<div class="bar" style = "width:100%" id = "enemyhealth" data-health = "100">
     			<div class="progress" id = 'e'></div>
   			</div>
   		</div>
-
+      <br/>
   		<div class = 'enemy'>
           <img id = 'front' src = '../3.gif' data-id = 'none'></img>
         </div>
+        <br/>
+        <br/>
+        <br/>
         <div class = 'player'>
           <img id = 'back' src = '../1.png' data-id = 'none'></img>
         </div>
@@ -43,22 +45,23 @@
     			<div class="progress" id = 'p'>40</div>
   			</div>
   		</div>
+  		<div id = 'playertext' class = 'ui big green label'>Dragonite</div>
 
-  		<p id = 'playertext'>Dragonite</p>
+      <div class="ui buttons firsttwo">
+         <button type="button" id="m1" class = 'ui bottom attached yellow basic button' data-pp = '16'>Move 1
+         </button>
+        <button type="button" id="m2" class = 'ui yellow basic button' data-pp = '16'> Move 2
+        </button>
+      </div>
 
-  		<div class="firsttwo">
-   			 <button type="button" id="m1" class = 'ui yellow basic button' data-pp = '16'>Move 1
-   			 </button>
-    		<button type="button" id="m2" class = 'ui yellow basic button' data-pp = '16'> Move 2
-    		</button>
-    	</div>
-
-    	<div class="lasttwo">
-    		<button type="button" id="m3"  class = 'ui yellow basic button' data-pp = '16'>Move 3</button>
-    		<button type="button" id="m4" class = 'ui yellow basic button' data-pp = '16'>Move 4</button>
-    	</div>
+      <div class="ui buttons lasttwo">
+        <button type="button" id="m3"  class = 'ui yellow basic button' data-pp = '16'>Move 3</button>
+        <button type="button" id="m4" class = 'ui yellow basic button' data-pp = '16'>Move 4</button>
+      </div>
 
 	</div>
+
+
 
 
 	</body>

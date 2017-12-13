@@ -6,7 +6,7 @@ Installation instructions:
 
 2. Open three terminal windows.
 
-3. Run ```node server.js```, ```mongod```, and ```node app.js```
+3. Run ```npm start```, ```mongod```, and ```node server.js```
 
 4. Navigate to localhost:3000 and enter your username (if you have none, one will be created for you). 
 

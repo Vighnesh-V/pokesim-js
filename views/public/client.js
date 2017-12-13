@@ -10,155 +10,155 @@ $(document).ready(function () {
   // This code connects to your server via websocket;
   // please don't modify it.
   /*begin*/
-var Normal = {
-    b: ["Normal", "Fighting", "Flying", "Poison", "Ground", "Bug", "Fire", "Water", "Grass", "Electric", "Psychic", "Ice", "Dragon"],
-    c: [],
-    a: ["Ghost"],
-    d: ["Rock"] 
-};
+  var Normal = {
+      b: ["Normal", "Fighting", "Flying", "Poison", "Ground", "Bug", "Fire", "Water", "Grass", "Electric", "Psychic", "Ice", "Dragon"],
+      c: [],
+      a: ["Ghost"],
+      d: ["Rock"] 
+  };
 
-var Fighting = {
-    a: ["Ghost"],
-    b: ["Fight", "Ground", "Fire", "Water", "Grass", "Electric", "Dragon"],
-    c: ["Normal", "Rock", "Ice"],
-    d: ["Flying", "Poison", "Bug", "Psychic"]
-};
+  var Fighting = {
+      a: ["Ghost"],
+      b: ["Fight", "Ground", "Fire", "Water", "Grass", "Electric", "Dragon"],
+      c: ["Normal", "Rock", "Ice"],
+      d: ["Flying", "Poison", "Bug", "Psychic"]
+  };
 
-var Flying = {
-    a: [],
-    b: ["Normal", "Flying", "Poison", "Ground", "Ghost", "Fire", "Water", "Psychic", "Ice", "Dragon"],
-    c: ["Fighting", "Bug", "Grass"],
-    d: ["Rock", "Electric"]
-};
+  var Flying = {
+      a: [],
+      b: ["Normal", "Flying", "Poison", "Ground", "Ghost", "Fire", "Water", "Psychic", "Ice", "Dragon"],
+      c: ["Fighting", "Bug", "Grass"],
+      d: ["Rock", "Electric"]
+  };
 
-var Poison = {
-    a: [],
-    b: ["Normal", "Fighting", "Flying", "Fire", "Water", "Electric", "Psychic", "Ice", "Dragon"],
-    c: ["Bug", "Grass"],
-    d: ["Poison", "Ground", "Rock", "Ghost"]
-};
+  var Poison = {
+      a: [],
+      b: ["Normal", "Fighting", "Flying", "Fire", "Water", "Electric", "Psychic", "Ice", "Dragon"],
+      c: ["Bug", "Grass"],
+      d: ["Poison", "Ground", "Rock", "Ghost"]
+  };
 
-var Ground = {
-    a: ["Flying"],
-    b: ["Normal", "Fighting", "Ground", "Ghost", "Water", "Psychic", "Ice", "Dragon"],
-    c: ["Poison", "Rock", "Fire", "Electric"],
-    d: ["Bug", "Grass"]
-};
+  var Ground = {
+      a: ["Flying"],
+      b: ["Normal", "Fighting", "Ground", "Ghost", "Water", "Psychic", "Ice", "Dragon"],
+      c: ["Poison", "Rock", "Fire", "Electric"],
+      d: ["Bug", "Grass"]
+  };
 
-var Rock = {
-    a: [],
-    b: ["Normal", "Poison", "Rock", "Ghost", "Water", "Grass", "Electric", "Psychic", "Dragon"],
-    c: ["Flying", "Bug", "Fire", "Ice"],
-    d: ["Fighting", "Ground"]
-};
+  var Rock = {
+      a: [],
+      b: ["Normal", "Poison", "Rock", "Ghost", "Water", "Grass", "Electric", "Psychic", "Dragon"],
+      c: ["Flying", "Bug", "Fire", "Ice"],
+      d: ["Fighting", "Ground"]
+  };
 
-var Bug = {
-    a: [],
-    b: ["Normal", "Ground", "Rock", "Bug", "Water", "Electric", "Ice", "Dragon"],
-    c: ["Poison", "Grass", "Psychic"],
-    d: ["Fighting", "Flying", "Ghost", "Fire"]
-};
+  var Bug = {
+      a: [],
+      b: ["Normal", "Ground", "Rock", "Bug", "Water", "Electric", "Ice", "Dragon"],
+      c: ["Poison", "Grass", "Psychic"],
+      d: ["Fighting", "Flying", "Ghost", "Fire"]
+  };
 
-var Ghost = {
-    a: ["Normal", "Psychic"],
-    b: ["Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Fire", "Water", "Grass", "Electric", "Psychic", "Ice", "Dragon" ],
-    c: ["Ghost"],
-    d: []
-};
+  var Ghost = {
+      a: ["Normal", "Psychic"],
+      b: ["Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Fire", "Water", "Grass", "Electric", "Psychic", "Ice", "Dragon" ],
+      c: ["Ghost"],
+      d: []
+  };
 
-var Fire = {
-    a: [],
-    b: ["Normal", "Fighting", "Flying", "Poison", "Ground", "Ghost", "Electric", "Psychic"],
-    c: ["Bug", "Grass", "Ice"],
-    d: ["Rock", "Fire", "Water", "Dragon"]
-};
+  var Fire = {
+      a: [],
+      b: ["Normal", "Fighting", "Flying", "Poison", "Ground", "Ghost", "Electric", "Psychic"],
+      c: ["Bug", "Grass", "Ice"],
+      d: ["Rock", "Fire", "Water", "Dragon"]
+  };
 
-var Water = {
-    a: [],
-    b: ["Normal", "Fighting", "Flying", "Poison", "Bug", "Ghost", "Electric", "Psychic", "Ice"],
-    c: ["Ground", "Rock", "Fire"],
-    d: ["Water", "Grass", "Dragon"]
-};
+  var Water = {
+      a: [],
+      b: ["Normal", "Fighting", "Flying", "Poison", "Bug", "Ghost", "Electric", "Psychic", "Ice"],
+      c: ["Ground", "Rock", "Fire"],
+      d: ["Water", "Grass", "Dragon"]
+  };
 
-var Grass = {
-    a: [],
-    b: ["Normal", "Fighting", "Ghost", "Electric", "Psychic", "Ice"],
-    c: ["Ground", "Rock", "Water"],
-    d: ["Flying", "Poison", "Bug", "Fire", "Grass", "Dragon"]
-};
+  var Grass = {
+      a: [],
+      b: ["Normal", "Fighting", "Ghost", "Electric", "Psychic", "Ice"],
+      c: ["Ground", "Rock", "Water"],
+      d: ["Flying", "Poison", "Bug", "Fire", "Grass", "Dragon"]
+  };
 
-var Electric = {
-    a: ["Ground"],
-    b: ["Normal", "Fighting", "Poison", "Rock", "Bug", "Ghost", "Fire", "Psychic", "Ice"],
-    c: ["Flying", "Water"],
-    d: ["Grass", "Electric", "Dragon"]
-};
+  var Electric = {
+      a: ["Ground"],
+      b: ["Normal", "Fighting", "Poison", "Rock", "Bug", "Ghost", "Fire", "Psychic", "Ice"],
+      c: ["Flying", "Water"],
+      d: ["Grass", "Electric", "Dragon"]
+  };
 
-var Psychic = {
-    a: [],
-    b: ["Normal", "Flying", "Ground", "Rock", "Bug", "Ghost", "Fire", "Water", "Grass", "Electric", "Ice", "Dragon"],
-    c: ["Fighting", "Poison"],
-    d: ["Fire", "Ice"]
-};
+  var Psychic = {
+      a: [],
+      b: ["Normal", "Flying", "Ground", "Rock", "Bug", "Ghost", "Fire", "Water", "Grass", "Electric", "Ice", "Dragon"],
+      c: ["Fighting", "Poison"],
+      d: ["Fire", "Ice"]
+  };
 
-var Ice = {
-    a: [],
-    b: ["Normal", "Fighting", "Poison", "Rock", "Bug", "Ghost", "Fire", "Electric", "Psychic"],
-    c: ["Flying", "Ground", "Grass", "Dragon"],
-    d: ["Water", "Psychic"]
-};
+  var Ice = {
+      a: [],
+      b: ["Normal", "Fighting", "Poison", "Rock", "Bug", "Ghost", "Fire", "Electric", "Psychic"],
+      c: ["Flying", "Ground", "Grass", "Dragon"],
+      d: ["Water", "Psychic"]
+  };
 
-var Dragon = {
-    a: [],
-    b: ["Normal", "Fighting", "Poison", "Rock", "Bug", "Ghost", "Fire", "Electric", "Psychic", "Flying", "Ground", "Grass", "Water", "Psychic"],
-    c: ["Dragon"],
-    d: []
-};
+  var Dragon = {
+      a: [],
+      b: ["Normal", "Fighting", "Poison", "Rock", "Bug", "Ghost", "Fire", "Electric", "Psychic", "Flying", "Ground", "Grass", "Water", "Psychic"],
+      c: ["Dragon"],
+      d: []
+  };
 
-var strength = {
-    "Normal": Normal,
-    "Fighting": Fighting,
-    "Flying": Flying,
-    "Poison": Poison,
-    "Ground": Ground,
-    "Rock": Rock,
-    "Bug": Bug,
-    "Ghost": Ghost,
-    "Fire": Fire,
-    "Water": Water,
-    "Grass": Grass,
-    "Electric": Electric,
-    "Psychic": Psychic,
-    "Ice": Ice,
-    "Dragon": Dragon
-};
+  var strength = {
+      "Normal": Normal,
+      "Fighting": Fighting,
+      "Flying": Flying,
+      "Poison": Poison,
+      "Ground": Ground,
+      "Rock": Rock,
+      "Bug": Bug,
+      "Ghost": Ghost,
+      "Fire": Fire,
+      "Water": Water,
+      "Grass": Grass,
+      "Electric": Electric,
+      "Psychic": Psychic,
+      "Ice": Ice,
+      "Dragon": Dragon
+  };
 
-var Type = function (at, defender) {
-    var x = []; 
-    for (var i = 0; i < defender.length; i++) {
-        if (strength[at]["a"].indexOf(defender[i]) > -1) {
-          x.push(0);
-        } else if (strength[at]["b"].indexOf(defender[i]) > -1) {
-          x.push(1);
-        } else if (strength[at]["c"].indexOf(defender[i]) > -1) {
-          x.push(2);
-        } else {
-          x.push(0.5);
-        }
-    }
+  var Type = function (at, defender) {
+      var x = []; 
+      for (var i = 0; i < defender.length; i++) {
+          if (strength[at]["a"].indexOf(defender[i]) > -1) {
+            x.push(0);
+          } else if (strength[at]["b"].indexOf(defender[i]) > -1) {
+            x.push(1);
+          } else if (strength[at]["c"].indexOf(defender[i]) > -1) {
+            x.push(2);
+          } else {
+            x.push(0.5);
+          }
+      }
 
-    var y = 1;
-    for (var i = 0; i < x.length; i++) {
-        y = y * x[i];
-    }
+      var y = 1;
+      for (var i = 0; i < x.length; i++) {
+          y = y * x[i];
+      }
 
-    return y;
-};
+      return y;
+  };
 
-var DMG = function(Level, Power, A, D, STAB, Type, random) {
-    return (((2 * Level / 5 + 2) * Power * (A / D))/ 50 + 2) * modifier(STAB, Type, random);
-};
-var modifier = function (STAB, Type, random) {return STAB * Type * random;};
+  var DMG = function(Level, Power, A, D, STAB, Type, random) {
+      return (((2 * Level / 5 + 2) * Power * (A / D))/ 50 + 2) * modifier(STAB, Type, random);
+  };
+  var modifier = function (STAB, Type, random) {return STAB * Type * random;};
 
 
 
@@ -170,24 +170,9 @@ var modifier = function (STAB, Type, random) {return STAB * Type * random;};
   window.socket.on('connect', function () {
     console.log('Connected to server!');
     var user = $('h2').text();
-    console.log(user);
     window.socket.emit('login', {name: user});
     $('#linker').hide();
 
-  });
-
-  $('#switch').on('click', function(){
-    console.log('clicked');
-    var x = $('h2').text();
-    window.socket.emit('message', {msg: x});
-  });
-
-  window.socket.on('message', function(data) {
-    console.log('Received: ' + data.msg);
-  });
-
-  window.socket.on('chat start', function (data) {
-    console.log(data);
   });
 
   window.socket.on('game_over', function (data) {
@@ -197,6 +182,16 @@ var modifier = function (STAB, Type, random) {return STAB * Type * random;};
     $('#m2').prop('disabled', true);
     $('#m3').prop('disabled', true);
     $('#m4').prop('disabled', true);
+  });
+
+  window.socket.on('game_over_winner', function (data) {
+    console.log('GAME OVER');
+    $('#linker').show();
+    $('#m1').prop('disabled', true);
+    $('#m2').prop('disabled', true);
+    $('#m3').prop('disabled', true);
+    $('#m4').prop('disabled', true);
+    window.socket.emit('trade', data);
   });
 
   window.socket.on('populate', function (data) {
@@ -294,12 +289,9 @@ var modifier = function (STAB, Type, random) {return STAB * Type * random;};
         data.them.spd = data.them.spd + 1;
       }
     }
-    console.log('My health: ' + newHealth1 );
-    console.log('Their health: ' + newHealth);
     //work out speed ties here!
     //I win speed tie
     if (data.me.spd > data.them.spd) {
-      console.log('speed tie won');
       //I win speed tie
       if (newHealth === 0) {
         $('#enemyhealth').data('health', newHealth);
@@ -308,14 +300,12 @@ var modifier = function (STAB, Type, random) {return STAB * Type * random;};
         $('#e').text(newhstr);
         //i won speed and got them
         edeaths += 1;
-        console.log(data.them.name);
         window.socket.emit('get_enemy_secondary', {
           name: data.them.name,
           me: data.me.name,
           e: edeaths,
           p: pdeaths
         });
-        console.log('Won Speed tie and killed them');
       } else if (newHealth1 === 0) {
         $('#playerhealth').data('health', newHealth1);
         var newhstr1 = newHealth1 + '%'; 
@@ -326,14 +316,12 @@ var modifier = function (STAB, Type, random) {return STAB * Type * random;};
         var newhstr = newHealth + '%'; 
         $('#enemyhealth').width(newhstr);
         $('#e').text(newhstr);
-        console.log(data.me.name);
         pdeaths += 1;
         window.socket.emit('get_player_secondary', {
           name: data.me.name,
           p: pdeaths,
           e: edeaths
         });
-        console.log('Won Speed Tie but died');
        
         //I won speed but they got me
       } else {
@@ -350,7 +338,6 @@ var modifier = function (STAB, Type, random) {return STAB * Type * random;};
     }
     //they win speed tie
     if (data.me.spd < data.them.spd) {
-       console.log('speed tie lost');
       if (newHealth1 === 0) {
         $('#playerhealth').data('health', newHealth1);
         var newhstr1 = newHealth1 + '%'; 
@@ -363,7 +350,6 @@ var modifier = function (STAB, Type, random) {return STAB * Type * random;};
           p: pdeaths,
           e: edeaths
         });
-        console.log('Lost speed tie and died');
         
         // I lost speed and they got me
       } else if (newHealth === 0) { 
@@ -376,7 +362,6 @@ var modifier = function (STAB, Type, random) {return STAB * Type * random;};
         var newhstr1 = newHealth1 + '%'; 
         $('#playerhealth').width(newhstr1);
         $('#p').text(newhstr1);
-        console.log(data.them.name);
         edeaths += 1;
         window.socket.emit('get_enemy_secondary', {
           name: data.them.name,
@@ -384,7 +369,6 @@ var modifier = function (STAB, Type, random) {return STAB * Type * random;};
           e: edeaths,
           p: pdeaths
         });
-        console.log('Lost speed tie and got them');
         
         //i lost speed but got them
       } else {
@@ -534,7 +518,6 @@ var modifier = function (STAB, Type, random) {return STAB * Type * random;};
     $('#m4').prop('disabled', false);
     $('#switch').prop('disabled', false);
   });
-
 
 
 });
