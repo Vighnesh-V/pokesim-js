@@ -59,10 +59,10 @@ var findPairForSocket = function(socket) {
   }
 }
 
-
-server.listen(8080, function () {
+//removed for deployment
+/*server.listen(8080, function () {
   console.log('Server is running...');
-});
+});*/
 
 var socketServer = io(server);
 
