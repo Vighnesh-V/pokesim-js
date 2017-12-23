@@ -12,4 +12,5 @@ app.set('view engine', 'html');
 app.get('/', (req, res) => res.render('index'));
 app.get('/battle', battleRouter);
 
-app.listen(3000, () => console.log('Listening on port 3000!'));
+//app.listen(3000, () => console.log('Listening on port 3000!'));
+app.listen(process.env.PORT || 3000, () => console.log('Listening on port something!'));
