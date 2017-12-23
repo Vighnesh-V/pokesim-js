@@ -1,11 +1,9 @@
 var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-var uristring =
-    process.env.MONGOLAB_URI ||
-    process.env.MONGOHQ_URL ||
-    'mongodb://localhost/poke';
+var uristring = 'mongodb://<dbuser>:<dbpassword>@ds145952.mlab.com:45952/heroku_f8q1t7ds';
   //modified uristring to include mongolab stuff
+  //mongodb://<dbuser>:<dbpassword>@ds145952.mlab.com:45952/heroku_f8q1t7ds
 mongoose.connect(uristring, function (err) {
   if (err && err.message.includes('ECONNREFUSED')) {
     console.log('Error connecting to mongodb database: %s.\nIs "mongod" running?', err.message);
